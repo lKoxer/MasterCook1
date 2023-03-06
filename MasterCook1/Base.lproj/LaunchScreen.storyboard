@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +14,101 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Pb8-mC-gPw">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Effect" translatesAutoresizingMaskIntoConstraints="NO" id="LwJ-NX-cGQ">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cook #WithMe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUX-fx-5eq">
+                                <rect key="frame" x="54" y="585" width="320" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="5ZO-Lm-rjf"/>
+                                    <constraint firstAttribute="height" constant="134" id="OTI-NL-TVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find best recipes for cooking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibs-fx-iFS">
+                                <rect key="frame" x="98.666666666666686" y="734" width="231" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="LPu-lR-Ta3"/>
+                                    <constraint firstAttribute="height" constant="22" id="S1U-X1-pp7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100k+" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-2l-4Ty">
+                                <rect key="frame" x="107" y="60" width="49" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="4I7-Ve-eqq"/>
+                                    <constraint firstAttribute="height" constant="22" id="PUt-YR-mMT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium recipes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NC9-cL-jxE">
+                                <rect key="frame" x="191" y="60" width="138" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Rer-Py-6YA"/>
+                                    <constraint firstAttribute="width" constant="138" id="mAX-63-lRe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="uht-HO-Ms0">
+                                <rect key="frame" x="86" y="65.333333333333329" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="8KF-aG-dGh"/>
+                                    <constraint firstAttribute="width" constant="12" id="WJw-dZ-Jl8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mUX-fx-5eq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4yr-dV-MaP"/>
+                            <constraint firstItem="LwJ-NX-cGQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="BH0-Fd-tOn"/>
+                            <constraint firstItem="Pb8-mC-gPw" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="G2I-7x-X7n"/>
+                            <constraint firstItem="NC9-cL-jxE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="60" id="HGm-Gh-QNx"/>
+                            <constraint firstAttribute="trailing" secondItem="LwJ-NX-cGQ" secondAttribute="trailing" id="IR4-ov-aK1"/>
+                            <constraint firstItem="LwJ-NX-cGQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="IqU-GM-NSx"/>
+                            <constraint firstItem="Pb8-mC-gPw" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LSa-xo-27E"/>
+                            <constraint firstItem="NC9-cL-jxE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1bg-2l-4Ty" secondAttribute="trailing" constant="8" symbolic="YES" id="Mi9-vy-DmC"/>
+                            <constraint firstItem="uht-HO-Ms0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="86" id="Nv6-pa-bMP"/>
+                            <constraint firstAttribute="trailing" secondItem="Pb8-mC-gPw" secondAttribute="trailing" id="OwL-vg-Tx0"/>
+                            <constraint firstItem="uht-HO-Ms0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="65.200000000000003" id="TAj-yf-Rho"/>
+                            <constraint firstItem="ibs-fx-iFS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UK9-bH-NNk"/>
+                            <constraint firstAttribute="bottom" secondItem="mUX-fx-5eq" secondAttribute="bottom" constant="207" id="Vzj-mS-VQO"/>
+                            <constraint firstAttribute="trailing" secondItem="LwJ-NX-cGQ" secondAttribute="trailing" id="WfZ-xi-W5Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Pb8-mC-gPw" secondAttribute="trailing" id="bYK-bI-rSj"/>
+                            <constraint firstAttribute="bottom" secondItem="ibs-fx-iFS" secondAttribute="bottom" constant="170" id="d3q-kQ-JKv"/>
+                            <constraint firstAttribute="bottom" secondItem="Pb8-mC-gPw" secondAttribute="bottom" id="fAS-Pz-xkv"/>
+                            <constraint firstItem="1bg-2l-4Ty" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="107" id="fNQ-r7-rn9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NC9-cL-jxE" secondAttribute="trailing" constant="99" id="s2m-aa-7KJ"/>
+                            <constraint firstItem="1bg-2l-4Ty" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="60" id="xWg-PH-ikU"/>
+                            <constraint firstAttribute="bottom" secondItem="LwJ-NX-cGQ" secondAttribute="bottom" id="xh3-gv-xXC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Effect" width="375" height="416"/>
+        <image name="Star" width="12" height="13"/>
+        <image name="background" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
