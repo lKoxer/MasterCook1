@@ -1,44 +1,41 @@
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
-    let middleButton = UIButton()
-    let buttonImage = UIImageView()
-    let middleButtonDiameter: CGFloat = 52
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         tabBar.tintColor = .redButtonColor()
         setupMiddleButton()
-        setConstraints()
     }
-    // MARK: - Middle button
     
+    // TabBarButton – Setup Middle Button
     func setupMiddleButton() {
         
-        middleButton.layer.cornerRadius = middleButtonDiameter/2
+        let middleButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2)-25, y: -20, width: 50, height: 50))
+        var buttonImage: UIImageView = {
+            let imageBtn = UIImageView()
+            imageBtn.image = UIImage(systemName: "plus")
+            imageBtn.contentMode = .scaleAspectFill
+            imageBtn.tintColor = .black
+            imageBtn.translatesAutoresizingMaskIntoConstraints = false
+            return imageBtn
+        }()
+
+        //STYLE THE BUTTON YOUR OWN WAY
+        
         middleButton.backgroundColor = .redButtonColor()
-        middleButton.translatesAutoresizingMaskIntoConstraints = false
+        middleButton.layer.cornerRadius = (middleButton.layer.frame.width / 2)
         
-        buttonImage.image = UIImage(systemName: "plus")
-        buttonImage.contentMode = .scaleAspectFill
-        buttonImage.tintColor = .black
-        buttonImage.translatesAutoresizingMaskIntoConstraints = false
-        
-        middleButton.addTarget(self, action: #selector(didPressMiddleButton(sender:)), for: .touchUpInside)
-    }
-    
-    // MARK: - Actions
-    
-    @objc private func didPressMiddleButton(sender: UIButton) {
-        selectedIndex = 2
-    }
-    // MARK: - Set constraints
-    
-    func setConstraints() {
+        //add to the tabbar and add click event
+        self.tabBar.addSubview(middleButton)
+        middleButton.addTarget(self, action: #selector(self.menuButtonAction), for: .touchUpInside)
         
         middleButton.addSubview(buttonImage)
-        
         NSLayoutConstraint.activate([
             buttonImage.heightAnchor.constraint(equalToConstant: 15),
             buttonImage.widthAnchor.constraint(equalToConstant: 18),
@@ -46,13 +43,12 @@ class MainTabBarController: UITabBarController {
             buttonImage.centerYAnchor.constraint(equalTo: middleButton.centerYAnchor)
         ])
         
-        tabBar.addSubview(middleButton)
-        
-        NSLayoutConstraint.activate([
-            middleButton.heightAnchor.constraint(equalToConstant: middleButtonDiameter),
-            middleButton.widthAnchor.constraint(equalToConstant: middleButtonDiameter),
-            middleButton.centerXAnchor.constraint(equalTo: tabBar.centerXAnchor),
-            middleButton.bottomAnchor.constraint(equalTo: tabBar.topAnchor, constant: 30)
-        ])
+        self.view.layoutIfNeeded()
+    }
+    
+    // Menu Button Touch Action
+    @objc func menuButtonAction(sender: UIButton) {
+        self.selectedIndex = 2   //to select the middle tab. use "1" if you have only 3 tabs.
+        print("MenuButton")
     }
 }
