@@ -22,6 +22,7 @@
 		52BA23AD29BA637C00E0E25B /* SavedRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BA23AC29BA637C00E0E25B /* SavedRecipesViewController.swift */; };
 		E218C42B29B924CA00801433 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218C42A29B924CA00801433 /* RecipesTableViewCell.swift */; };
 		E218C43429B93D9100801433 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218C43329B93D9100801433 /* RecipeCollectionViewCell.swift */; };
+		E218C43629BD008E00801433 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218C43529BD008E00801433 /* NetworkService.swift */; };
 		E2E8A64129B3BDC700B1A77C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8A64029B3BDC700B1A77C /* MainTabBarController.swift */; };
 		E2E8A64329B3BDF700B1A77C /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8A64229B3BDF700B1A77C /* CustomizedTabBar.swift */; };
 		E2E8A64529B3CD2900B1A77C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8A64429B3CD2900B1A77C /* HomeViewController.swift */; };
@@ -46,6 +47,7 @@
 		52BA23AC29BA637C00E0E25B /* SavedRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewController.swift; sourceTree = "<group>"; };
 		E218C42A29B924CA00801433 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		E218C43329B93D9100801433 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E218C43529BD008E00801433 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E2E8A64029B3BDC700B1A77C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E2E8A64229B3BDF700B1A77C /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
 		E2E8A64429B3CD2900B1A77C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		04743B4B29B3B59400146C0E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E218C43529BD008E00801433 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				04743B3229B3B46A00146C0E /* SceneDelegate.swift in Sources */,
 				51E3FF2A29BA3352003311D5 /* RecipeDetali.swift in Sources */,
 				5260338929BA72B900D38AC4 /* NetworkHomeRecipeManager.swift in Sources */,
+				E218C43629BD008E00801433 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
