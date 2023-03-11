@@ -576,7 +576,7 @@
         <!--Recipe Detail View Controller-->
         <scene sceneID="Qsg-bH-XAA">
             <objects>
-                <viewController id="QQH-ae-6i3" userLabel="Recipe Detail View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeDetailViewController" id="QQH-ae-6i3" userLabel="Recipe Detail View Controller" customClass="RecipeDetailViewController" customModule="MasterCook1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cZJ-Jx-c5U">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -773,6 +773,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="6eo-qI-EXa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ImageChef" destination="oTX-XN-o5E" id="axb-Cz-2rS"/>
+                        <outlet property="ImageRecipe" destination="ZkD-vC-iKz" id="OwT-ia-gPE"/>
+                        <outlet property="NameChef" destination="GTI-tg-ToX" id="Ubo-eo-BPq"/>
+                        <outlet property="NameLocation" destination="q1E-o0-HTy" id="Uz4-gx-sVH"/>
+                        <outlet property="NumberOfEviews" destination="OH2-IS-Www" id="ZUi-4i-uwo"/>
+                        <outlet property="NumberOfReviews" destination="W22-Hg-qvr" id="mAe-5b-ZMy"/>
+                        <outlet property="RaitingLabel" destination="MJN-xr-j2d" id="pOy-tG-7Xn"/>
+                        <outlet property="RecipeNameLabel" destination="VCk-7T-3sY" id="qDB-2e-8Rb"/>
+                        <outlet property="TibleViewIngredientsByThePiece" destination="C5f-Us-WZw" id="CdS-XY-r9d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhH-Ij-fq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
