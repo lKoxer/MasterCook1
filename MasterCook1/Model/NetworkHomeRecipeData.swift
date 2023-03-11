@@ -9,6 +9,7 @@ import Foundation
 
 struct NetworkData: Decodable {
     let results: [Recipes]
+    let number: Int
 }
 
 struct Recipes: Decodable {
