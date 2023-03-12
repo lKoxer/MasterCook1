@@ -10,8 +10,10 @@ import UIKit
 class RecipesTableViewCell: UITableViewCell {
     
     @IBOutlet var collectionView: UICollectionView!
+    var detailVC = DetailRecipeViewController()
     let photoRecipes = ["recipe1", "recipe2", "recipe3", "recipe1"]
     let creatorsName = ["creator1", "creator2", "creator3", "creator1"]
+    var selectedRow = 0
     
     var recipes: NetworkData? // структура с рецептами
     let networkService = NetworkService() // класс хранящий метод парсинга JSON
@@ -43,6 +45,7 @@ class RecipesTableViewCell: UITableViewCell {
 }
 
 extension RecipesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if contentView.tag == 0 || contentView.tag == 2  {
             return self.recipes?.number ?? 4
@@ -67,7 +70,7 @@ extension RecipesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
                     }
                 }
             }
-            cell.imageRecipe.layer.cornerRadius = 15
+            
             return cell
         } else if contentView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "category", for: indexPath) as! RecipeCollectionViewCell
@@ -95,7 +98,6 @@ extension RecipesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "creators", for: indexPath) as! RecipeCollectionViewCell
             cell.photoCreator.image = UIImage(named: creatorsName[indexPath.row])
-            cell.photoCreator.layer.cornerRadius = 55
             return cell
         }
     }
