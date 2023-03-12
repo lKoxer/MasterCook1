@@ -11,7 +11,12 @@ class SavedRecipesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageViewSavedRecipes: UIImageView!
     @IBOutlet weak var nameRecipe: UILabel!
-    @IBOutlet weak var pictureAuthor: UIImageView!
+    @IBOutlet weak var pictureAuthor: UIImageView! {
+        didSet {
+            pictureAuthor.layer.cornerRadius = pictureAuthor.frame.height / 2
+            pictureAuthor.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var nameAuthor: UILabel!
     
     override func awakeFromNib() {
